@@ -3,12 +3,8 @@ import Post from "@/components/Post";
 
 const Feeds = () => {
   return (
-    <div className="w-full mt-8">
-      <Header />
-      <div className="flex justify-center gap-3 border-b">
-        <button>Following</button>
-        <button className="border-b-2 border-green-500">For you</button>
-      </div>
+    <div className="mt-10 flex flex-col">
+      
       <Post
         profilepic="/img1.png"
         name="Ayub Nasir"

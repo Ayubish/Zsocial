@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  IoAdd,
   IoChatbubble,
   IoHome,
   IoNotifications,
@@ -9,7 +10,7 @@ import {
 
 export default function () {
   return (
-    <div className="flex fixed bottom-0 left-0 right-0 bg-white p-3">
+    <div className="flex fixed justify-between items-center bottom-0 left-0 right-0 bg-white p-3 px-5">
       <Link href={"/feeds"}>
         <IoHome />
       </Link>
@@ -17,7 +18,7 @@ export default function () {
         <IoPeople />
       </Link>
       <Link href={"/feeds"}>
-        <IoNotifications />
+        <IoAdd size={26} />
       </Link>
       <Link href={"/feeds"}>
         <IoChatbubble />
