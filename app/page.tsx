@@ -6,7 +6,7 @@ import Feeds from "@/components/Feeds";
 
 export default function MyApp() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex w-full flex-col items-center justify-center">
       <Feeds />
     </main>
   );
