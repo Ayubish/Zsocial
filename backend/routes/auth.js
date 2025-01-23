@@ -2,6 +2,7 @@ import express from "express";
 import { check, validationResult } from "express-validator";
 import User from "../models/User.js";
 import jwt from "jsonwebtoken";
+import Post from "../models/post.js";
 
 
 
@@ -54,6 +55,13 @@ router.post('/login', async (req, res)=>{
     } catch (err) {
         res.status(500).json({error: 'Server error', err: err});
     }
+});
+
+router.post("/post", async(req, res)=>{
+    const {name, likes} = req.body;
+    const post = new Post({name, likes});
+    await post.save();
+    res.status(200).json({msg: "You made it"});
 });
 
 export default router;
